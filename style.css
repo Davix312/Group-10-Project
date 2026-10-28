@@ -1,77 +1,8 @@
-/* =====================================================
-   HOSTEL CONNECT BANDA
-   SHARED WEBSITE STYLESHEET 
-   ===================================================== */
-
-/* 1. COLOUR VARIABLES */
-
-:root {
-    --navy: #15344b;
-    --navy-dark: #0d2538;
-    --teal: #2f9eaa;
-    --teal-dark: #237d88;
-    --pale: #eef7f8;
-    --ink: #263746;
-    --muted: #647584;
-    --white: #ffffff;
-    --line: #dce8ec;
-    --shadow: 0 12px 32px rgba(21, 52, 75, 0.10);
-}
-
-/* 2. GENERAL WEBSITE STYLING */
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--ink);
-    background: #f7fafb;
-    line-height: 1.6;
-}
-
-a {
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-button,
-input,
-select,
-textarea {
-    font-family: inherit;
-}
-
-.container {
-    width: min(1120px, 90%);
-    margin: auto;
-}
-
-h1,
-h2,
-h3 {
-    line-height: 1.2;
-    color: var(--navy);
-}
-
-p {
-    margin-top: 0;
-}
-
-/* 3. WEBSITE HEADER */
+/* ==================================
+   HEADER
+================================== */
 
 .site-header {
-   .site-header {
     background: #15344B;
     border-bottom: 2px solid #2F9EAA;
     position: sticky;
@@ -79,42 +10,21 @@ p {
     z-index: 1000;
 }
 
-.brand-name {
-    color: white;
-}
-
-.brand-name small {
-    color: #dce8ec;
-}
-
-.main-nav a {
-    color: white;
-}
-
-.main-nav a:hover,
-.main-nav a[aria-current="page"] {
-    color: #2F9EAA;
-    background: rgba(255,255,255,0.1);
-}
-
 .header-inner {
     width: min(1160px, 92%);
     margin: auto;
     min-height: 82px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: 24px;
 }
-
-/* Website logo and name */
 
 .brand {
     display: flex;
     align-items: center;
     gap: 11px;
     text-decoration: none;
-    min-width: max-content;
 }
 
 .brand-mark {
@@ -123,564 +33,57 @@ p {
     display: grid;
     place-items: center;
     border-radius: 14px;
-    background: linear-gradient(135deg, var(--teal), var(--navy));
+    background: linear-gradient(135deg, #2F9EAA, #0D2538);
     color: white;
     font-size: 23px;
-    box-shadow: 0 6px 15px rgba(47, 158, 170, 0.23);
 }
 
 .brand-name {
+    color: white;
     font-weight: 800;
-    color: var(--navy);
-    line-height: 1.15;
 }
-
-.brand-name small {
-    display: block;
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--muted);
-    margin-top: 4px;
-    letter-spacing: 0.5px;
-}
-
-/* 4. NAVIGATION MENU */
+/* ==================================
+   NAVIGATION
+================================== */
 
 .main-nav {
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 10px;
 }
 
 .main-nav a {
+    color: white;
     text-decoration: none;
-    padding: 10px 13px;
-    border-radius: 10px;
-    color: #445766;
-    font-size: 14px;
-    font-weight: 600;
-    transition: background 0.2s ease, color 0.2s ease,
-                transform 0.2s ease;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
 }
 
 .main-nav a:hover,
 .main-nav a[aria-current="page"] {
-    color: var(--teal-dark);
-    background: #e9f7f8;
+    background: rgba(255,255,255,0.15);
+    color: #2F9EAA;
 }
 
-/* Sign-up navigation button */
-
-.main-nav a.signup-link {
-    background: var(--teal);
-    color: white;
-    padding: 11px 19px;
-    margin-left: 6px;
-    box-shadow: 0 5px 13px rgba(47, 158, 170, 0.2);
+.signup-link {
+    background: #2F9EAA;
+    color: white !important;
 }
 
-.main-nav a.signup-link:hover {
-    background: var(--teal-dark);
-    color: white;
-    transform: translateY(-1px);
+.signup-link:hover {
+    background: #237D88;
 }
 
-/* Mobile menu button */
-
-.menu-toggle {
-    display: none;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    background: white;
-    color: var(--navy);
-    padding: 8px 11px;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-/* 5. HOME PAGE HERO SECTION */
-
-.hero {
-    background:
-        linear-gradient(
-            120deg,
-            rgba(13, 37, 56, 0.95),
-            rgba(31, 103, 119, 0.88)
-        ),
-        radial-gradient(
-            circle at 80% 20%,
-            rgba(255, 255, 255, 0.22),
-            transparent 30%
-        );
-
-    color: white;
-    padding: 82px 0 78px;
-    overflow: hidden;
-}
-
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 48px;
-    align-items: center;
-}
-
-.eyebrow {
-    display: inline-block;
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    background: rgba(255, 255, 255, 0.10);
-    border-radius: 999px;
-    padding: 6px 12px;
-    font-size: 12px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.hero h1 {
-    color: white;
-    font-size: clamp(2.3rem, 5vw, 4.15rem);
-    margin: 18px 0;
-    letter-spacing: -1.6px;
-}
-
-.hero p {
-    color: #e2edf2;
-    font-size: 17px;
-    max-width: 610px;
-}
-
-/* Hero buttons */
-
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 27px;
-}
-
-/* 6. GENERAL BUTTONS */
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 0;
-    border-radius: 10px;
-    padding: 12px 19px;
-    text-decoration: none;
-    font-weight: 700;
-    cursor: pointer;
-    font-size: 14px;
-    transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-}
-
-.btn-primary {
-    background: var(--teal);
-    color: white;
-}
-
-.btn-primary:hover {
-    background: var(--teal-dark);
-    color: white;
-}
-
-.btn-light {
-    background: white;
-    color: var(--navy);
-}
-
-.btn-outline {
-    border: 1px solid #cbdde3;
-    color: var(--navy);
-    background: white;
-}
-
-/* 7. HERO INFORMATION CARD */
-
-.hero-card {
-    background: rgba(255, 255, 255, 0.96);
-    color: var(--ink);
-    padding: 25px;
-    border-radius: 22px;
-    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.22);
-    transform: rotate(1deg);
-}
-
-.hero-card h3 {
-    margin: 0 0 7px;
-}
-
-.hero-card p {
-    color: var(--muted);
-    font-size: 14px;
-    margin-top: 0;
-}
-
-/* Decorative hostel image area */
-
-.mock-photo {
-    min-height: 205px;
-    border-radius: 15px;
-    padding: 20px;
-    margin-bottom: 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: white;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(11, 37, 55, 0.15),
-            rgba(11, 37, 55, 0.78)
-        ),
-        linear-gradient(
-            135deg,
-            #b6d7d6,
-            #5e9aa4 45%,
-            #1d536b
-        );
-}
-
-.mock-photo span {
-    font-size: 12px;
-    opacity: 0.9;
-}
-
-.mock-photo strong {
-    font-size: 23px;
-}
-
-/* Statistics */
-
-.stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-.stat {
-    background: var(--pale);
-    padding: 13px 8px;
-    border-radius: 12px;
-    text-align: center;
-}
-
-.stat strong {
+.brand-name small {
     display: block;
-    color: var(--navy);
-    font-size: 19px;
+    color: #dce8ec;
 }
+/* ==================================
+   TABLES
+================================== */
 
-.stat span {
-    color: var(--muted);
-    font-size: 11px;
-}
-
-/* 8. GENERAL SECTIONS */
-
-.section {
-    padding: 66px 0;
-}
-
-.section-soft {
-    background: var(--pale);
-}
-
-.section-heading {
-    text-align: center;
-    max-width: 690px;
-    margin: 0 auto 34px;
-}
-
-.section-heading h2 {
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
-    margin: 0 0 12px;
-}
-
-.section-heading p {
-    color: var(--muted);
-    margin: 0;
-}
-
-/* 9. GENERAL CONTENT CARDS */
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.card {
-    background: white;
-    border: 1px solid var(--line);
-    border-radius: 17px;
-    padding: 24px;
-    box-shadow: 0 7px 20px rgba(21, 52, 75, 0.04);
-}
-
-.card-icon {
-    width: 48px;
-    height: 48px;
-    display: grid;
-    place-items: center;
-    border-radius: 14px;
-    background: #e7f6f7;
-    color: var(--teal-dark);
-    font-size: 24px;
-}
-
-.card h3 {
-    margin: 16px 0 8px;
-    font-size: 19px;
-}
-
-.card p {
-    color: var(--muted);
-    font-size: 14px;
-}
-
-/* Text links */
-
-.text-link {
-    color: var(--teal-dark);
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.text-link:hover {
-    text-decoration: underline;
-}
-
-/* 10. INNER PAGE BANNER */
-
-.page-banner {
-    padding: 55px 0;
-    background: linear-gradient(
-        120deg,
-        var(--navy-dark),
-        #276b7a
-    );
-    color: white;
-}
-
-.page-banner h1 {
-    color: white;
-    margin: 0 0 10px;
-    font-size: clamp(2rem, 4vw, 3rem);
-}
-
-.page-banner p {
-    margin: 0;
-    color: #e0edf0;
-    max-width: 680px;
-}
-
-.breadcrumb {
-    color: #c5e4e7;
-    font-size: 13px;
-    margin-bottom: 12px;
-}
-
-/* 11. CONTENT LAYOUTS */
-
-.content-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: center;
-}
-
-.info-panel {
-    background: white;
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    padding: 28px;
-    box-shadow: var(--shadow);
-}
-
-/* Checklist */
-
-.check-list {
-    padding: 0;
-    list-style: none;
-}
-
-.check-list li {
-    padding: 8px 0 8px 30px;
-    position: relative;
-}
-
-.check-list li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    top: 8px;
-    color: var(--teal-dark);
-    font-weight: 800;
-}
-
-/* 12. HOSTEL LISTINGS */
-
-.hostel-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.hostel-card {
-    padding: 0;
-    overflow: hidden;
-}
-
-.hostel-visual {
-    min-height: 155px;
-    padding: 20px;
-    display: flex;
-    align-items: flex-end;
-    color: white;
-    font-weight: 800;
-    font-size: 19px;
-
-    background: linear-gradient(
-        140deg,
-        #b7d9d8,
-        #5d9ba6 50%,
-        #1c5067
-    );
-}
-
-.hostel-visual.v2 {
-    background: linear-gradient(
-        140deg,
-        #d9d2bc,
-        #a7b8a0 50%,
-        #52796e
-    );
-}
-
-.hostel-visual.v3 {
-    background: linear-gradient(
-        140deg,
-        #e0c6ae,
-        #bb8f78 50%,
-        #6c5865
-    );
-}
-
-.hostel-details {
-    padding: 20px;
-}
-
-.price {
-    color: var(--teal-dark);
-    font-weight: 800;
-    font-size: 18px;
-}
-
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-    margin: 13px 0;
-}
-
-.tag {
-    font-size: 11px;
-    background: #edf6f7;
-    color: #32616b;
-    border-radius: 999px;
-    padding: 5px 9px;
-}
-
-/* 13. FORMS: SIGN-UP, LOGIN AND CONTACT */
-
-.form-wrap {
-    width: min(550px, 100%);
-    margin: auto;
-}
-
-.form-card {
-    background: white;
-    padding: 30px;
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    box-shadow: var(--shadow);
-}
-
-.form-card h2 {
-    margin-top: 0;
-}
-
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-}
-
-.form-field {
-    margin-bottom: 16px;
-}
-
-.form-field label {
-    display: block;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 6px;
-}
-
-.form-field input,
-.form-field select,
-.form-field textarea {
-    width: 100%;
-    padding: 12px 13px;
-    border: 1px solid #cfdde3;
-    border-radius: 9px;
-    background: #fcfefe;
-    color: var(--ink);
-    font: inherit;
-    font-size: 14px;
-}
-
-.form-field textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-.form-field input:focus,
-.form-field select:focus,
-.form-field textarea:focus {
-    outline: 3px solid #d4f1f3;
-    border-color: var(--teal);
-}
-
-.form-note {
-    font-size: 12px;
-    color: var(--muted);
-}
-
-/* Form messages */
-
-.notice {
-    padding: 12px 14px;
-    border-radius: 10px;
-    background: #e9f7ed;
-    color: #25653c;
-    margin-top: 14px;
-    display: none;
-}
-
-/* 14. GENERAL TABLE STYLING — ALL PAGES */
-
-.table-wrapper,
-.services-comparison-wrapper {
-    width: 100%;
+.table-wrapper {
     overflow-x: auto;
     margin: 20px 0;
 }
@@ -688,228 +91,62 @@ p {
 table {
     width: 100%;
     border-collapse: collapse;
-    border-spacing: 0;
-    margin: 20px 0;
-    background-color: #ffffff;
-    color: #263746;
-    font-size: 15px;
-    border: 1px solid #dce3e8;
+    background: white;
 }
 
 table th {
-    background-color: #0b3045;
-    color: #ffffff;
-    padding: 15px;
+    background: #15344B;
+    color: white;
+    padding: 14px;
     text-align: center;
-    font-weight: bold;
-    border: 1px solid #dce3e8;
 }
 
 table td {
-    padding: 14px 15px;
-    text-align: left;
-    vertical-align: middle;
-    border: 1px solid #dce3e8;
-    line-height: 1.6;
+    padding: 12px;
+    border: 1px solid #dce8ec;
 }
 
-table tbody tr:nth-child(odd) {
-    background-color: #ffffff;
+table tr:nth-child(even) {
+    background: #f4f7f8;
 }
 
-table tbody tr:nth-child(even) {
-    background-color: #f1f4f6;
+table tr:hover {
+    background: #e7f6f8;
 }
-
-table tbody tr:hover {
-    background-color: #e1f3f6;
-}
-
-/* 15. WEBSITE FOOTER */
-
-.site-footer {
-    background: #102b40;
-    color: #dce8ee;
-    padding: 42px 0 18px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 35px;
-}
-
-.site-footer h3 {
-    color: white;
-    margin-top: 0;
-    font-size: 16px;
-}
-
-.site-footer p,
-.site-footer a {
-    color: #c4d4de;
-    font-size: 13px;
-}
-
-.footer-links {
-    display: grid;
-    gap: 8px;
-}
-
-.footer-links a {
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    color: white;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    margin-top: 28px;
-    padding-top: 16px;
-    font-size: 12px;
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-/* 16. SOCIAL MEDIA ICONS */
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
-    margin: 25px 0;
-}
-
-.social-icons a {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    border-radius: 50%;
-    border: 1px solid #e5e9ec;
-    background: #ffffff;
-    font-size: 23px;
-    text-decoration: none;
-    transition: background 0.3s ease, color 0.3s ease,
-                transform 0.3s ease;
-}
-
-.social-icons a:hover {
-    transform: translateY(-4px);
-}
-
-/* WhatsApp */
-
-.social-icons .whatsapp {
-    color: #25d366;
-}
-
-.social-icons .whatsapp:hover {
-    background: #25d366;
-    color: #ffffff;
-    border-color: #25d366;
-}
-
-/* Google */
-
-.social-icons .google {
-    color: #4285f4;
-}
-
-.social-icons .google:hover {
-    background: #4285f4;
-    color: #ffffff;
-    border-color: #4285f4;
-}
-
-/* TikTok */
-
-.social-icons .tiktok {
-    color: #000000;
-}
-
-.social-icons .tiktok:hover {
-    background: #000000;
-    color: #ffffff;
-    border-color: #000000;
-}
-
-/* Instagram */
-
-.social-icons .instagram {
-    color: #e1306c;
-}
-
-.social-icons .instagram:hover {
-    background: #e1306c;
-    color: #ffffff;
-    border-color: #e1306c;
-}
-
-/* X / Twitter */
-
-.social-icons .twitter {
-    color: #000000;
-}
-
-.social-icons .twitter:hover {
-    background: #000000;
-    color: #ffffff;
-    border-color: #000000;
-}
-
-/* YouTube */
-
-.social-icons .youtube {
-    color: #ff0000;
-}
-
-.social-icons .youtube:hover {
-    background: #ff0000;
-    color: #ffffff;
-    border-color: #ff0000;
-}
-
-/* Facebook */
-
-.social-icons .facebook {
-    color: #1877f2;
-}
-
-.social-icons .facebook:hover {
-    background: #1877f2;
-    color: #ffffff;
-    border-color: #1877f2;
-}
-
-/* 17. GOOGLE MAP */
+/* ==================================
+   GOOGLE MAP
+================================== */
 
 .map-container {
     width: 100%;
-    height: 350px;
+    height: 400px;
     overflow: hidden;
-    border: 1px solid #e5e9ec;
-    border-radius: 10px;
-    margin-top: 20px;
+    border-radius: 12px;
+    border: 1px solid #dce8ec;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .map-container iframe {
     width: 100%;
     height: 100%;
-    display: block;
     border: 0;
 }
-/* =========================
+/* ==================================
+   MOBILE MENU BUTTON
+================================== */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+/* ==================================
    TABLETS
-========================= */
+================================== */
+
 @media (max-width: 992px) {
 
     .hero-grid,
@@ -923,10 +160,10 @@ table tbody tr:hover {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
-/* =========================
+/* ==================================
    MOBILE PHONES
-========================= */
+================================== */
+
 @media (max-width: 768px) {
 
     .menu-toggle {
@@ -936,17 +173,27 @@ table tbody tr:hover {
     .main-nav {
         display: none;
         flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
         width: 100%;
+        background: #15344B;
+        padding: 15px;
     }
 
     .main-nav.open {
         display: flex;
     }
 
+    .main-nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-grid,
+    .content-grid,
     .cards,
     .hostel-grid,
-    .content-grid,
-    .hero-grid,
     .footer-grid,
     .form-grid {
         grid-template-columns: 1fr;
@@ -961,24 +208,27 @@ table tbody tr:hover {
     }
 
     table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
+        min-width: 600px;
+    }
+
+    .map-container {
+        height: 300px;
     }
 }
-
-/* =========================
-   SMALL PHONES
-========================= */
 @media (max-width: 480px) {
+
+    .brand-mark {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
 
     .brand-name {
         font-size: 14px;
     }
 
-    .brand-mark {
-        width: 35px;
-        height: 35px;
+    .btn {
+        width: 100%;
     }
 
     .social-icons a {
@@ -986,9 +236,105 @@ table tbody tr:hover {
         height: 40px;
         font-size: 18px;
     }
+}
+/* ==================================
+   SOCIAL MEDIA ICONS
+================================== */
 
-    .btn {
-        width: 100%;
-    }
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 25px 0;
 }
 
+.social-icons a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    background: #ffffff;
+    border: 1px solid #dce8ec;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+/* WhatsApp */
+.social-icons .whatsapp {
+    color: #25D366;
+}
+
+.social-icons .whatsapp:hover {
+    background: #25D366;
+    color: white;
+}
+
+/* Facebook */
+.social-icons .facebook {
+    color: #1877F2;
+}
+
+.social-icons .facebook:hover {
+    background: #1877F2;
+    color: white;
+}
+
+/* Instagram */
+.social-icons .instagram {
+    color: #E4405F;
+}
+
+.social-icons .instagram:hover {
+    background: #E4405F;
+    color: white;
+}
+
+/* X (Twitter) */
+.social-icons .twitter {
+    color: #000000;
+}
+
+.social-icons .twitter:hover {
+    background: #000000;
+    color: white;
+}
+
+/* YouTube */
+.social-icons .youtube {
+    color: #FF0000;
+}
+
+.social-icons .youtube:hover {
+    background: #FF0000;
+    color: white;
+}
+
+/* TikTok */
+.social-icons .tiktok {
+    color: #000000;
+}
+
+.social-icons .tiktok:hover {
+    background: #000000;
+    color: white;
+}
+
+/* Gmail */
+.social-icons .google {
+    color: #EA4335;
+}
+
+.social-icons .google:hover {
+    background: #EA4335;
+    color: white;
+}
