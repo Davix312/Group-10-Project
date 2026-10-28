@@ -71,11 +71,30 @@ p {
 /* 3. WEBSITE HEADER */
 
 .site-header {
-    background: var(--white);
-    border-bottom: 1px solid var(--line);
+   .site-header {
+    background: #15344B;
+    border-bottom: 2px solid #2F9EAA;
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+.brand-name {
+    color: white;
+}
+
+.brand-name small {
+    color: #dce8ec;
+}
+
+.main-nav a {
+    color: white;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+    color: #2F9EAA;
+    background: rgba(255,255,255,0.1);
 }
 
 .header-inner {
